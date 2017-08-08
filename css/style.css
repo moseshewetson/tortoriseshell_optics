@@ -3,9 +3,12 @@ html {
     line-height: 1.4;
 }
 .container {
-    width: 960px;
+    max-width: 960px;
     display: flex;
     margin: auto;
+}
+.mobile {
+    display: none;
 }
 
 /* Banner */
@@ -18,6 +21,7 @@ html {
     height: 30rem;
     background-image: url(../resources/media/images/glasses-bg.png);
     background-size: cover;
+    background-position: center;
 }
 .banner .container {
     flex-direction: column;
@@ -71,4 +75,180 @@ nav span {
     color: black;
     background-color: white;
     margin: 10rem -2rem 0 0;
+}
+
+/* Main Section */
+
+.main-section .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Menu */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 0;
+    height: 8rem;
+    width: 27rem;
+    justify-content: space-between;
+}
+.menu-item {
+    width: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+#menu-item1 img {
+    width: 3.5rem;
+}
+#menu-item2 img {
+    width: 5rem;
+}
+#menu-item3 img {
+    width: 5rem;
+}
+.menu-text {
+    font-family: Helvetica;
+    font-size: 1rem;
+    color: black;
+    text-align: center;
+}
+
+/* Information */
+
+.info {
+    display: flex;
+    justify-content: space-around;
+}
+.info-item {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+.info-title {
+    padding: .5rem 1.25rem;
+    width: 10rem;
+    background-color: cadetblue;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 1rem;
+    color: white;
+}
+.info-text {
+    font-family: Helvetica;
+    font-size: 1rem;
+    color: black;
+}
+
+/* Footer */
+
+.footer .container {
+    background-color: azure;
+    margin-top: 5rem;
+}
+footer {}
+.footer-info {
+    display: flex;
+    padding: 4rem;
+}
+footer img {
+    height: 1.5rem;
+}
+footer span {
+    margin-left: 1rem;
+    font-family: Helvetica;
+    font-size: 1rem;
+    color: black;
+}
+
+/* Tablet */
+
+@media only screen and (max-width: 1050px) {
+    .container {
+        width: 100%;
+        max-width: none;
+    }
+    .header {
+        margin-top: 0;
+    }
+    .title {
+        margin: 5rem 2rem 0 0;
+        padding: .75rem 4rem;
+        font-size: 1.33rem;
+    }
+    .title span {
+        margin: 1em 0;
+    }
+    .banner {
+        height: 22rem;
+    }
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 670px) {
+    nav span {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+    .brand span {
+        display: none;
+    }
+    .title {
+        width: 100%;
+        padding: 1rem 0;
+        margin: 9rem 0 0 0;
+        text-align: center;
+        font-size: 1rem;
+    }
+    .title span {
+        margin: 0;
+    }
+    .banner {
+        height: 17rem;
+    }
+    .menu {
+        flex-direction: column;
+        height: auto;
+        width: auto;
+        padding: 3.77rem 0 0 0;
+    }
+    .menu-text {
+        font-size: .77rem;
+    }
+    .menu-item {
+        margin-bottom: 1.54rem;
+    }
+    .info {
+        margin-top: 2.23rem;
+        flex-direction: column;
+        width: 100%;
+    }
+    .info-item {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+    .info-title {
+        width: 100%;
+        text-align: center;
+        padding: .5rem 0;
+    }
+    .info-text {
+        font-size: .77rem;
+        margin: 0 2rem;
+    }
+    .footer-info span {
+        display: none;
+    }
+    footer {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
 }
